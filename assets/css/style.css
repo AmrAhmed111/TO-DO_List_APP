@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: linear-gradient(#Ec449B 50%, #99F443 50%);
+}
+.app {
+    width: min(95vw, 500px);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 30px;
+}
+.container {
+    padding: 32px 40px;
+    background-color: #f1f8fb;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 12.8px;
+}
+#wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 16px;
+}
+#wrapper input {
+    width: 100%;
+    background-color: transparent;
+    color: #111111;
+    font-size: 14.4px;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 16px 8px;
+}
+#wrapper input:focus {
+    outline: none;
+    border-color: #5a95ff;
+}
+#wrapper button {
+    position: relative;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #5a95ff;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+#tasks {
+    margin-top: 16px;
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+    padding: 16px 8px;
+}
+.task {
+    background-color: #ffffff;
+    padding: 12.8px 16px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    cursor: pointer;
+}
+.task:not(:first-child) {
+    margin-top: 16px;
+}
+.task input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+}
+.task input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.task input[type="checkbox"]:checked {
+    background-color: #5a95ff;
+    border-color: #5a95ff;
+}
+.task input[type="checkbox"]:checked::before {
+    content: "\f26e";
+    position: absolute;
+    font-family: "bootstrap-icons";
+    font-size: 12.8px;
+    color: #ffffff;
+    font-weight: 900;
+}
+.task span {
+    font: 14.4px;
+    font-weight: 400;
+    word-break: break-all;
+}
+.task button {
+    color: #ffffff;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.edit {
+    background-color: #5a95ff;
+}
+.delete {
+    background-color: #ff5c5c;
+}
+#pending-tasks span {
+    color: #5a95ff;
+}
+.completed {
+    text-decoration: line-through;
+    color: #a0a0a0;
+}
+#error {
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 24px;
+    padding: 16px 0;
+    border-radius: 12.8px;
+    display: none;
+}
